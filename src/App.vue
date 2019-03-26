@@ -8,8 +8,8 @@
 </template>
 
 <script>
-export default {
-  name: 'app',
+export default { // sads
+  name: 'pickles',
   computed: {
     user:{
       get() {

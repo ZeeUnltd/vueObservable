@@ -2,7 +2,7 @@ import Vue from 'vue';
 
 import {mutations as UserMutations} from "./user";
 
-export const state = Vue.observable({})
+export const state = {}
 
 export const getters = {}
 

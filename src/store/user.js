@@ -1,8 +1,8 @@
 import Vue from 'vue';
 
-export const state = Vue.observable({
-    name: "Florent"
-})
+export const state = {
+    name: "sub number 1"
+}
 
 export const getters = {};
 
