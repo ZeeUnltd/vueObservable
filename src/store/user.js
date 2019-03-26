@@ -1,14 +1,18 @@
 import Vue from 'vue';
 
 export const state = {
-    name: "sub number 1"
+    count: 0
 }
 
-export const getters = {};
+export const getters = {
+    getCount() {
+        return state.count;
+    }
+};
 
 export const mutations = {
-    updateUserName(newName) {
-        state.name = newName;
+    updateCount() {
+        state.count += 1;
     }
 }
 

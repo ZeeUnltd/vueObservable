@@ -1,18 +1,23 @@
 import Vue from 'vue';
 
-import {mutations as UserMutations} from "./user";
+import User from "./user";
 
 export const state = {}
 
 export const getters = {}
 
 export const mutations = {
-    updateName(newName) { 
-        UserMutations.updateUserName(newName)
+    updateCount() { 
+        User.mutations.updateCount()
+        actions.sayHello()
     }
 }
 
-export const actions = {}
+export const actions = {
+    sayHello() {
+        console.log("hello")
+    }
+}
 
 export default {
     state,

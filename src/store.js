@@ -5,15 +5,15 @@ import Viewer from "./store/viewer";
 
 class Store {
     constructor(obj) {
-        this._hydrateStore(obj)
+      this.hydrateStore(obj)
     }
 
-    _hydrateStore(obj) {
+    hydrateStore(obj) {
         for (let k in obj) {
             this[k] = {
                 state: Vue.observable(obj[k].state || {}),
                 getters: obj[k].getters || {},
-                mutations: obj[k].mutations || {},
+                mutations:obj[k].mutations || {},
                 actions: obj[k].actions || {}
             };
         }

@@ -1,27 +1,27 @@
 <template>
   <div id="app">
     <h1>
-      {{user}}
+      {{count}}
     </h1>
-    <button @click="updateName">Click</button>
+    <button @click="updateCount">Click</button>
   </div>
 </template>
 
 <script>
-export default { // sads
-  name: 'pickles',
+export default {
+  name: "pickles",
   computed: {
-    user:{
+    count: {
       get() {
-        return this.$store.user.state.name
+        return this.$store.user.getters.getCount();
       }
     }
   },
   methods: {
-    updateName() {
-        this.$store.viewer.mutations.updateName("damien");
-      }
+    updateCount() {
+      this.$store.viewer.mutations.updateCount();
+    }
   }
-}
+};
 </script>
 
